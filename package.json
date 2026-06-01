@@ -1,0 +1,11 @@
+{
+  "name": "receipt-autofill",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI receipt scanner — React + Convex + Gemini",
+  "scripts": {
+    "start": "bun run start --cwd client",
+    "build": "bun run build --cwd client",
+    "dev": "bun run dev --cwd client"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "receipt-autofill",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "overrides": {
+    "ws": "^8.20.1"
+  },
+  "scripts": {
+    "start": "convex dev --start \"bun run dev\"",
+    "dev": "vite --host",
+    "dev:convex": "convex dev",
+    "build": "tsc -b && vite build",
+    "build:vercel": "node scripts/vercel-build.mjs",
+    "test:convex": "convex run receipts:list",
+    "test:endpoints": "node scripts/test-convex-endpoints.mjs",
+    "test:groq": "node scripts/test-groq-extract.mjs",
+    "test:e2e": "node scripts/e2e-smoke.mjs",
+    "test:comprehensive": "node scripts/comprehensive-test.mjs",
+    "test:all": "npm run test:comprehensive && npm run test:e2e",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@clerk/clerk-react": "^5.61.3",
+    "@tailwindcss/forms": "^0.5.11",
+    "convex": "^1.39.1",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1",
+    "mammoth": "^1.12.0",
+    "pdfjs-dist": "^5.7.284",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.12.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "playwright": "^1.60.0",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^3.4.19",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.59.2",
+    "vite": "^8.0.12"
+  }
+}
